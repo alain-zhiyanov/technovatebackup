@@ -5,7 +5,7 @@ function CalendarPage() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch('/api/Stateful1/triggers/When_a_HTTP_request_is_received/invoke?api-version=2022-05-01')
+    fetch('https://technovate.azurewebsites.net:443/api/Calendar/triggers/When_a_HTTP_request_is_received/invoke?api-version=2022-05-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=u773UwjViEGI5pVjz_uSnzhSEa3O4VSfuq5o0-B8-yY')
       .then(response => response.json())
       .then(data => setEvents(data.value))
       .catch(error => console.error('Error fetching calendar events:', error));
