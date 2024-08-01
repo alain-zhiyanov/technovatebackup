@@ -7,7 +7,7 @@ function SubscribePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('/api/Stateful2/triggers/When_a_HTTP_request_is_received/invoke?api-version=2022-05-01', {
+    fetch('https://technovate.azurewebsites.net:443/api/Newsletter/triggers/When_a_HTTP_request_is_received/invoke?api-version=2022-05-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=vnr5XWv7bz09Ktcgbxu-s5vIogLKqiMrUxKG6b3Ior0', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
